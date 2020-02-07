@@ -1,0 +1,17 @@
+<h2><i class="fa fa-homr"></i>Accueil</h2>
+<ul>
+
+<?php for($i = 0; $i < count($posts); $i++ ): ?>
+
+<li class="post">
+  <h3>
+    <i></i>
+    <a href="show-post.php?id=<?=$posts[$i]['Id']?>"><?=$posts[$i]['Title']?></a>
+    <p>Rédigé par <?= ?> <?= ?> le <?= ?></p>
+  </h3>
+  <p></p>
+  
+</li>
+
+<?php endfor; ?>
+</ul>
