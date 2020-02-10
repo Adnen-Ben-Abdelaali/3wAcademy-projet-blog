@@ -1,0 +1,28 @@
+<table>
+  <th>
+    <td>Titre</td>
+    <td>Article</td>
+    <td>Auteur</td>
+    <td>Catégorie</td>
+    <td>
+      
+    </td>
+  </th>
+  <?php foreach($table as $index):  ?>
+
+    <tr>
+      <td> <?= $index["Title"] ?> </td>
+      <td> <?= $index["Contents"] ?>  </td>
+      <td> <?= $index["FirstName"] ?> <?= $index["LastName"]?> </td>
+      <td> <?= $index["Name"]?> </td>
+    
+      <td><a href="editer-post.php?id=<?= $index["Id"] ?>">éditer</a>
+      </br>
+      <a href="supprimer-post.php?id=<?= $index["Id"] ?>">supprimer</a>
+      </td>
+    </tr>
+
+  <?php endforeach;  ?>
+
+
+</table>

@@ -6,12 +6,12 @@
 <li class="post">
   <h3>
     <i></i>
-    <a href="show-post.php?id=<?=$posts[$i]['Id']?>"><?=$posts[$i]['Title']?></a>
-    <p>Rédigé par <?= ?> <?= ?> le <?= ?></p>
   </h3>
-  <p></p>
+    <p><?= htmlspecialchars($posts[$i]["Contents"] ) ?></p>
+    <a href="show-post.php?id=<?= htmlspecialchars($posts[$i]['Id']) ?>"><?= htmlspecialchars($posts[$i]['Title'])?></a>
+    <p>Rédigé par <?= htmlspecialchars($posts[$i]["FirstName"]) ?> <?= htmlspecialchars($posts[$i]["LastName"]) ?> le <?= htmlspecialchars($posts[$i]["CreationTimestamp"]) ?></p>
   
 </li>
-
++
 <?php endfor; ?>
 </ul>

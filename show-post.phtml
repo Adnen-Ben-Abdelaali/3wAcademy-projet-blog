@@ -1,0 +1,30 @@
+
+
+
+<h1>Article</h1>
+
+
+
+  <p><?= htmlspecialchars($PostsById["Contents"]) ?></p>
+  <p>rédigé par <?= htmlspecialchars($PostsById["FirstName"]) ?> <?= htmlspecialchars($PostsById["LastName"]) ?> le <?= htmlspecialchars($PostsById["CreationTimestamp"]) ?></p>
+
+<?php foreach($CommentById as $key => $value): ?> 
+  
+  <i></i><p> Rédigé par <?= htmlspecialchars($value["NickName"]) ?></p>
+  <p> <?= $value["Contents"] ?> </p>
+  <hr>
+<?php  endforeach; ?>
+
+
+<form method="POST" action="add-comment.php">
+  <p>Nouveau commentaire</p>
+  
+  <label for="pseudo">Pseudo:</label>
+  <input type="text" name="pseudo"  id="pseudo"/>
+  </br>
+  <label for="commentaire">Commentaire:</label>
+  <input type="textarea" name="commentaire" id="commentaire"/>
+  </br>
+  <button id="addButton" type="submit" name="addButton" value="<?= $postId ?>">Ajouter</button>
+  <a href="index.php" >Annuler</a>
+</form>
