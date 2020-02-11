@@ -1,0 +1,36 @@
+
+<h2>Rédiger un nouvel article</h2>
+
+<form method="POST" action="rediger-article.php">
+  <h3>Nouvel article</h3>
+  <label for="title">Titre:</label>
+  <textarea name="title" id="title" style="resize: none;" cols="40" rows="3"></textarea>
+  </br>
+  <label for="article">Article:</label>
+  <textarea name="article" id="article" cols="40" rows="30" style="resize: none;"></textarea>
+  </br>
+
+  <label for="auteur">Auteur: </label>
+  <select name="auteur" id="auteur">
+    <?php foreach($GetInformationsArray as $index): ?>
+    
+        <option value="<?=$index["Id"] ?>" > <?= $index["FirstName"] ." "  .$index["LastName"] ?> </option>
+
+    <?php endforeach; ?>
+  </select>
+  </br>
+  <label for="categorie"> Catégorie</label>
+  <select name="categorie" id="categorie">
+    
+    <?php foreach($getCategoryArray as $index): ?>
+
+      <option value="<?=$index["Id"] ?>"> <?=$index["Name"] ?> </option>
+
+    <?php endforeach; ?>
+
+  </select>
+    </br>
+    <button name="" type="submit" value="submit">Ajouter nouvel article</button>
+    <a href="index.php">Annuler</a>
+
+</form>

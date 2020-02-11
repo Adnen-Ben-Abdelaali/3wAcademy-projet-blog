@@ -1,4 +1,5 @@
 <h2><i class="fa fa-homr"></i>Accueil</h2>
+<a href="rediger-article.php"> Rédiger un article</a>
 <ul>
 
 <?php for($i = 0; $i < count($posts); $i++ ): ?>
@@ -12,6 +13,6 @@
     <p>Rédigé par <?= htmlspecialchars($posts[$i]["FirstName"]) ?> <?= htmlspecialchars($posts[$i]["LastName"]) ?> le <?= htmlspecialchars($posts[$i]["CreationTimestamp"]) ?></p>
   
 </li>
-+
+
 <?php endfor; ?>
 </ul>

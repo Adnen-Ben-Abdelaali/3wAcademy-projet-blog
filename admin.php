@@ -12,7 +12,7 @@ $request->execute();
 
 $table = $request->fetchAll(PDO::FETCH_ASSOC);
 
-var_dump($table);
+// var_dump($table);
 
 $template = "admin";
 include "layout.phtml";

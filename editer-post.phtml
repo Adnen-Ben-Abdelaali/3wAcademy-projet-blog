@@ -1,0 +1,19 @@
+
+
+<h2>éditer un article</h2>
+
+<form method="POST" action="editer-post.php">
+  
+  <h3>Article</h3>
+  
+  
+  <label for="title">Titre</label>
+  <textarea name="title" value="" id="title"  rows="2" cols="40" style="resize: none;"></textarea>
+  </br>
+  <label for="article">Article</label>
+  <textarea id="article" name="article" value="" rows="20" cols="40" style="resize:none;"></textarea>
+  </br>
+  <button id="addButton" name="articleId" type="submit" value="<?= $idArticleEditer ?>">éditer</button>
+  
+  <a href="show-post.php?id=<?= $idArticleEditer ?>">Annuler</a>
+</form>
